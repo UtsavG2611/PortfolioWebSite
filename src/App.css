@@ -1,0 +1,157 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main app container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Adjusted for the new header height */
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+/* All sections flow normally */
+.main-content > section {
+  position: relative;
+  background-color: #121212;
+  width: 100%;
+}
+
+/* Remove hover animation */
+.main-content > section:hover {
+  transform: none;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container for sections */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section styling */
+section {
+  padding: 4rem 0;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  color: #fff;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #2E3192, #1BFFFF);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Button styles */
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #2E3192, #1BFFFF);
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #4ca5ff;
+}
+
+.secondary-btn:hover {
+  background: rgba(76, 165, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Page Transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* More About Me page animation */
+.more-about-me-page {
+  animation: slideIn 0.6s ease-in-out;
+  padding-top: 80px; /* Adjusted for the header height */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 120px; /* Adjusted for the stacked header on mobile */
+  }
+  
+  .more-about-me-page {
+    padding-top: 120px; /* Adjusted for the stacked header on mobile */
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+}

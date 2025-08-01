@@ -1,0 +1,504 @@
+/* More About Me Page Styles */
+.more-about-me-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 4.2rem;
+  color: #fff8f8;
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #2E3192 0%, #1BFFFF 100%);
+}
+
+/* Common section styles */
+section {
+  margin-bottom: 2.5rem;
+  padding: 2.5rem;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+/* Centered section titles */
+.section-title {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, #2E3192 0%, #1BFFFF 100%);
+}
+
+.section-intro {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* Photography Section Styles */
+.photography-content {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  gap: 2rem;
+  margin-bottom: 0rem;
+}
+
+.photo-showcase {
+  flex: 1;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* .photo-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  z-index: 1;
+} */
+
+.photo-display {
+  position: relative;
+
+  z-index: 2;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.current-photo {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.current-photo.transitioning {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.photo-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.photo-nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.photo-nav:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.photo-nav.prev {
+  left: 10px;
+}
+
+.photo-nav.next {
+  right: 10px;
+}
+
+.photography-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photography-text h3 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.photography-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.photo-thumbnails {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0px;
+  margin-top: 0px;
+}
+
+.thumbnail {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.7;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.thumbnail.active {
+  border: 2px solid #1BFFFF;
+  opacity: 1;
+}
+
+/* Club Activities Section Styles */
+.events-container {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.event-card {
+  border-radius: 8px;
+  padding: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-card-header {
+  cursor: pointer;
+  padding: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.event-card-header::after {
+  content: 'More...';
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #2E3192;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover .event-card-header {
+  transform: translateY(-5px);
+}
+
+.event-card:hover .event-card-header::after {
+  opacity: 1;
+}
+
+.event-card:hover .event-image {
+  filter: brightness(0.7);
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.event-brief {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Expanded event styles */
+.event-expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.event-expanded-content {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  animation: scaleIn 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.expanded-image-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.expanded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expanded-details {
+  padding: 30px;
+  background-color: #222222;
+}
+
+.expanded-details h3 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #ffffff;
+  border-bottom: 2px solid #2E3192;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.expanded-details p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.event-role, .event-date {
+  font-size: 1rem;
+  color: #e0e0e0;
+  background-color: #333333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border-left: 3px solid #2E3192;
+}
+
+.event-details {
+  padding: 1.5rem;
+}
+
+.event-details h3 {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.event-details p {
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Film Contest Section Styles */
+.film-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 20px;
+}
+
+.film-image {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(66, 66, 66, 0.2);
+}
+
+.film-details {
+  flex: 1;
+}
+
+.film-details h3 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.film-details p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.achievement-highlight {
+  background-color: #3a3a3a;
+  width: auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #2E3192;
+}
+
+.achievement-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #2E3192 0%, #1BFFFF 100%);
+  color: rgb(255, 255, 255);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .photography-content {
+    flex-direction: column;
+    
+  }
+  
+  .events-container {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  
+  .film-content {
+    flex-direction: column;
+    
+  }
+  
+  .film-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 350px; 
+  object-fit: cover;
+  position: relative;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+}
+  
+  .photo-thumbnails {
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .photo-thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .current-photo {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .current-photo {
+    height: 250px;
+  }
+}

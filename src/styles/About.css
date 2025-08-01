@@ -1,0 +1,348 @@
+.about-section {
+  padding: 5rem 0;
+  background-color: #121212;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  color: #fff;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #2E3192, #1BFFFF);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  
+  gap: 3rem;
+  align-items: start;
+}
+
+.personal-info {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(90deg, #2E3192, #1BFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #a9a9a9;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.typing-text {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 600;
+  position: relative;
+  min-width: 1ch;
+}
+
+.cursor {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: bold;
+  animation: blink 0.8s infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.main-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 100%;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #2E3192, #1BFFFF);
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #4ca5ff;
+}
+
+.secondary-btn:hover {
+  background: rgba(76, 165, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.social-buttons a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-buttons a:hover {
+  background: linear-gradient(90deg, #2E3192, #1BFFFF);
+  transform: translateY(-3px);
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #a9a9a9;
+  font-size: 1.1rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ID Card Styling */
+.id-card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  perspective: 1500px;
+  height: 600px;
+  margin-top: 20px;
+  transform-style: preserve-3d;
+}
+
+.id-card-string {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 5px;
+  height: 10px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.7));
+  transform-origin: top center;
+  z-index: 1;
+  animation: stringSwing 5s ease-in-out infinite;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes stringSwing {
+  0%, 100% { transform: translateX(-50%) rotate(0deg); }
+  25% { transform: translateX(-50%) rotate(-2deg); }
+  75% { transform: translateX(-50%) rotate(2deg); }
+}
+
+.profile-image-container.id-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  width: 380px;
+  max-width: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.15s ease-out;
+  transform-origin: top center;
+  animation: swing 5s ease-in-out infinite;
+  backface-visibility: hidden;
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+
+.id-card-header {
+  width: 100%;
+  background: linear-gradient(90deg, #2E3192, #1b63ff);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.id-card-logo {
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.id-card-hole {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 10px 10px;
+}
+
+.profile-image {
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+  border: 4px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* .id-card-details {
+  width: 100%;
+  padding: 0px 15px;
+  text-align: center;
+  background: linear-gradient(to bottom, white, #f8f8f8);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+} */
+
+.id-card-details h3 {
+  margin: 0 0 5px 0;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.id-card-details p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .id-card-container {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    height: 400px;
+  }
+  
+  .profile-image-container.id-card {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .about-section {
+    padding: 4rem 0;
+  }
+  
+  .header-buttons {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  .main-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .social-buttons {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .name {
+    font-size: 2rem;
+  }
+  
+  .id-card-container {
+    height: 380px;
+  }
+  
+  .profile-image-container.id-card {
+    width: 240px;
+  }
+  
+  .id-card-logo {
+    font-size: 0.9rem;
+  }
+  
+  .id-card-details h3 {
+    font-size: 1.1rem;
+  }
+  
+  .id-card-details p {
+    font-size: 0.8rem;
+  }
+}
