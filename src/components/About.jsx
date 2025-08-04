@@ -116,7 +116,7 @@ const About = () => {
               <div className="header-buttons">
                 <div className="main-buttons">
                   <a href="#contact" className="btn primary-btn">Contact Me</a>
-                  <a href="#" className="btn secondary-btn">Download CV</a>
+                  <a href="https://drive.google.com/file/d/1qAr-RqDhD6Pe-g4MCAxq9AcBc3xO7pPS/view?usp=sharing" className="btn secondary-btn">Download CV</a>
                 </div>
                 <div className="social-buttons">
                   <a href="https://www.linkedin.com/in/utsavgupta26/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">

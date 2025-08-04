@@ -32,12 +32,14 @@ body {
   background-color: #121212;
   color: rgba(255, 255, 255, 0.87);
   overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
 }
 
 h1 {
@@ -54,6 +56,7 @@ h3 {
 
 p {
   margin: 0.5em 0;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Links */
@@ -62,6 +65,7 @@ a {
   color: #4ca5ff;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 a:hover {
@@ -75,7 +79,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
+  font-family: 'Inter', sans-serif;
   background-color: #1a1a1a;
   color: #fff;
   cursor: pointer;
@@ -94,7 +98,7 @@ button:focus-visible {
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -103,7 +107,7 @@ button:focus-visible {
 
 ::-webkit-scrollbar-thumb {
   background: #333;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -116,7 +120,38 @@ button:focus-visible {
   color: #fff;
 }
 
-/* Responsive adjustments */
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #4ca5ff;
+  outline-offset: 2px;
+}
+
+/* Mobile scrollbar */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.8em;
+  }
+  
+  h2 {
+    font-size: 2.2em;
+  }
+  
+  h3 {
+    font-size: 1.4em;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5em;
@@ -128,5 +163,62 @@ button:focus-visible {
   
   h3 {
     font-size: 1.3em;
+  }
+  
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  a:hover {
+    color: #4ca5ff;
+  }
+  
+  button:hover {
+    border-color: transparent;
+    background-color: #1a1a1a;
+  }
+  
+  a:active {
+    color: #ffffff;
+  }
+  
+  button:active {
+    border-color: #4ca5ff;
+    background-color: #2a2a2a;
+  }
+}
+
+/* Performance optimizations */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent zoom on input focus for iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
   }
 }

@@ -56,6 +56,7 @@ section {
   margin-bottom: 3rem;
   position: relative;
   color: #fff;
+  font-weight: 600;
 }
 
 .section-title::after {
@@ -78,6 +79,7 @@ section {
   transition: all 0.3s ease;
   display: inline-block;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .primary-btn {
@@ -100,13 +102,6 @@ section {
 .secondary-btn:hover {
   background: rgba(76, 165, 255, 0.1);
   transform: translateY(-3px);
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .section-title {
-    font-size: 2.2rem;
-  }
 }
 
 /* Page Transitions */
@@ -138,6 +133,28 @@ section {
   padding-top: 80px; /* Adjusted for the header height */
 }
 
+/* Tablet Responsive */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  section {
+    padding: 3.5rem 0;
+  }
+  
+  .btn {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .main-content {
     padding-top: 120px; /* Adjusted for the stacked header on mobile */
@@ -149,9 +166,79 @@ section {
   
   .section-title {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title::after {
+    width: 60px;
+    height: 2.5px;
+    bottom: -8px;
   }
   
   section {
     padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 100px;
+  }
+  
+  .more-about-me-page {
+    padding-top: 100px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title::after {
+    width: 50px;
+    height: 2px;
+    bottom: -6px;
+  }
+  
+  section {
+    padding: 2.5rem 0;
+  }
+  
+  .container {
+    padding: 0 0.8rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn:hover {
+    transform: none;
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+  .primary-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .secondary-btn:active {
+    transform: scale(0.95);
   }
 }

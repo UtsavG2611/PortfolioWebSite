@@ -2,34 +2,86 @@ import React from 'react';
 import '../styles/Skills.css';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      category: 'Frontend',
-      skills: [
-        { name: 'HTML5', level: 90 },
-        { name: 'CSS3', level: 85 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'React', level: 80 },
-        { name: 'Responsive Design', level: 85 },
-      ],
+  const skills = [
+    { 
+      name: 'Java', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg' 
     },
-    {
-      category: 'Backend',
-      skills: [
-        { name: 'Node.js', level: 70 },
-        { name: 'Express', level: 65 },
-        { name: 'RESTful APIs', level: 75 },
-      ],
+    { 
+      name: 'Python', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg' 
     },
-    {
-      category: 'Tools & Others',
-      skills: [
-        { name: 'Git & GitHub', level: 80 },
-        { name: 'VS Code', level: 90 },
-        { name: 'npm/yarn', level: 85 },
-        { name: 'Webpack', level: 70 },
-        { name: 'Figma', level: 65 },
-      ],
+    { 
+      name: 'C++', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg' 
+    },
+    { 
+      name: 'MySQL', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg' 
+    },
+    { 
+      name: 'JavaScript', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg' 
+    },
+    { 
+      name: 'HTML', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg' 
+    },
+    { 
+      name: 'CSS', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg' 
+    },
+    { 
+      name: 'React', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' 
+    },
+    { 
+      name: 'Node.js', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg' 
+    },
+    { 
+      name: 'Pandas', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg' 
+    },
+    { 
+      name: 'NumPy', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg' 
+    },
+    { 
+      name: 'Matplotlib', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg' 
+    },
+    { 
+      name: 'Git', 
+      icon: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg' 
+    },
+    { 
+      name: 'GitHub', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg' 
+    },
+    { 
+      name: 'VS Code', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg' 
+    },
+    { 
+      name: 'PyCharm', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/pycharm/pycharm-original.svg' 
+    },
+    { 
+      name: 'Eclipse', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/eclipse/eclipse-original.svg' 
+    },
+    { 
+      name: 'Jupyter', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg' 
+    },
+    { 
+      name: 'MongoDB', 
+      icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg' 
+    },
+    { 
+      name: 'Postman', 
+      icon: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg' 
     },
   ];
 
@@ -37,26 +89,13 @@ const Skills = () => {
     <section id="skills" className="skills-section">
       <div className="container">
         <h2 className="section-title">Skills</h2>
-        <div className="skills-container">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
-              <h3 className="category-title">{category.category}</h3>
-              <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <div key={index} className="skill-card">
+              <div className="skill-icon">
+                <img src={skill.icon} alt={skill.name} />
               </div>
+              <div className="skill-name">{skill.name}</div>
             </div>
           ))}
         </div>
