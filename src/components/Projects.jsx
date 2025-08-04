@@ -21,8 +21,8 @@ const Projects = () => {
       description: 'This Cold Email Generator is an AI-powered web app that crafts personalized outreach emails using resume and company info, built with Streamlit, Python, and a vector database for smart matching.',
       technologies: ['Python', 'Streamlit', 'GrokAI', 'LLMs'],
       image: project2,
-      liveLink: '#',
-      codeLink: 'https://github.com/UtsavG2611/Cold-Email-Generator',
+      liveLink: 'https://cold-email-generator-1-lzju.onrender.com',
+      codeLink: 'https://github.com/UtsavG2611/Cold_email_generator',
     },
     {
       id: 3,
